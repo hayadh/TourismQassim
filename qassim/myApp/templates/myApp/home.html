@@ -1,15 +1,49 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Tourism in Al-Qasim </title>
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'main.css' %}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'img/styel.css' %}">
+
+
 </head>
 <body style="background-image: url('{% static "img/hj.jpg" %}');">
-    <h1>Explore Al Qassim</h1>
+    <img src="{% static 'img/OIP.png' %}" alt="Qassim Map Icon" class="map-icon">
+    <h1 class="center-text">Explore Al Qassim</h1> <p>Search for some governorates in Qassim
+         explore the most important places and activities, and have fun</p>
+    <div class="search-box">
+        
+        <input type="text" placeholder="Search for governorate">
+        <button type="submit">Search</button>
+    </div>
+    <div class="moving-images">
+        <div class="image-container">
+            <img src="{% static 'img/p.jpg' %}" alt="Tourist Places Image">
+            <div class="image-text">Tourist Places</div>
+        </div>
 
+        <div class="image-container">
+            <img src="{% static 'img/o.jpg' %}" alt="Restaurants Image">
+            <div class="image-text">Restaurants</div>
+        </div>
+
+        <div class="image-container">
+            <img src="{% static 'img/k.jpg' %}" alt="Cafes Image">
+            <div class="image-text">Cafes</div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
