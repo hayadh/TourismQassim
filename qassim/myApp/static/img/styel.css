@@ -14,6 +14,8 @@ body {
     transition: background-image 15s linear infinite;  
 }
 
+
+
 .center-text {
     display: flex;
     height: 100%;
@@ -137,4 +139,14 @@ img:hover {
 
 body:hover {
     animation: changeBackground 7s linear infinite; 
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+    background-color: #bdc4be;
+}
+
+.content p {
+    margin-bottom: 10px;
 }

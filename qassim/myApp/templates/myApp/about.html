@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Qassim</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'img/styel.css' %}">
+    <style>
+        
+        .about-qassim {
+            width: 100%; 
+            max-width: 6000px; 
+            margin: 90px auto; 
+            padding: 30px; 
+            background-color: #f1eeeecb; 
+            border-radius: 20px; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+            text-align: center; 
+        }
+
+        .about-qassim h1 {
+            font-size: 28px; 
+            color: #837f7f;
+            margin-bottom: 20px; 
+        }
+
+        .about-qassim p {
+            font-size: 16px; 
+            line-height: 1;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body> 
+    <img src="{% static 'img/OIP.png' %}" alt="Qassim Map Icon" class="map-icon">
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About Qassim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="about-qassim">
+        <h1>About Qassim</h1>
+        <p>
+            Al-Qassim, renowned as the land of plenty and poetry, stands as a testament to agricultural excellence and cultural richness.
+        </p>
+        <p>
+            Its fertile lands yield a diverse array of crops, with dates reigning supreme among its offerings. This agricultural abundance has established Al-Qassim as a bustling center of trade and commerce.
+        </p>
+        <p>
+            Each year, the region celebrates its agricultural heritage with the vibrant Dates Festival in Buraidah, a spectacle that showcases the region's bounty and cultural vibrancy.
+        </p>
+        <p>
+            Beyond its agricultural prosperity, Al-Qassim boasts a tapestry of cultural heritage and natural wonders. From ancient archaeological sites to picturesque landscapes, the region beckons adventurers and history enthusiasts alike.
+        </p>
+        <p>
+            Revered in poetry and legend, landmarks such as "The Eyes of the Air" and "Jabal Ramah" weave tales of antiquity and intrigue, adding depth to Al-Qassim's allure.
+        </p>
+        <p>
+            A journey through Al-Qassim is a journey through time and tradition, offering a blend of culinary delights, historical treasures, and breathtaking scenery that captivates the senses and nourishes the soul.
+        </p>
+    </div>
+</body>
+</html>
