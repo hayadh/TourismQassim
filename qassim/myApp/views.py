@@ -10,3 +10,7 @@ def about(request):
 
 def contact(request):
     return render(request, 'myApp/contact.html')
+def unayzah(request):
+    return render(request, 'myApp/unayzah.html')
+
+

@@ -5,19 +5,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tourism in Al-Qasim </title>
+    <title>Tourism in Al-Qassim</title>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'img/styel.css' %}">
-
-
 </head>
-<body style="background-image: url('{% static "img/hj.jpg" %}');">
+<body style="background-image: url('{% static 'img/hj.jpg' %}');">
     <img src="{% static 'img/OIP.png' %}" alt="Qassim Map Icon" class="map-icon">
-    <h1 class="center-text">Explore Al Qassim</h1> <p>Search for some governorates in Qassim
-         explore the most important places and activities, and have fun</p>
+    <h1 class="center-text">Explore Al Qassim</h1>
+    <p>Search for some governorates in Qassim, explore the most important places and activities, and have fun</p>
     <div class="search-box">
-        
-        <input type="text" placeholder="Search for governorate">
-        <button type="submit">Search</button>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search for governorate">
+            <button type="submit">Search</button>
+        </form>
     </div>
     <div class="moving-images">
         <div class="image-container">
@@ -43,11 +42,26 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'about' %}">About Qassim</a>
             </li>
-            
             <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
             </li>
         </ul>
     </nav>
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+            var searchQuery = document.getElementById("searchInput").value.trim().toLowerCase();
+
+            
+            if (searchQuery == "unayzah") {
+                window.location.href = "/unayzah/"; 
+            } else if (searchQuery =="buraidah") {
+                window.location.href = "buraidah-page"; 
+            } else {
+                alert("Governorate not found!"); 
+            }
+        });
+    </script>
 </body>
 </html>
