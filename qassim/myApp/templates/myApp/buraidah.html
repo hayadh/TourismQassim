@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styel.css' %}">
+    
+
+    
+    
+    <title>أماكن الإقامة في بريدة</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; 
+            direction: rtl; 
+            text-align: right; 
+            background-color: #f9f9f9; 
+            color: #333; 
+            line-height: 1.6;
+            padding: 100px;
+        }
+
+        header {
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            background-image: url("{% static 'img/hj.jpg' %}"); 
+            background-size: cover;
+            padding: 30px; 
+            z-index: 1000; 
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .section {
+            width: calc(20% - 20px); 
+            background-color: #fff; 
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section img {
+            width: 100%; 
+            border-radius: 5px; 
+        }
+
+        h2 {
+            color: #333; 
+        }
+
+        h1 {
+            height: 20px;
+            color: #000;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-item {
+            margin-left: 10px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .map-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/OIP.png' %}" alt="Qassim Map Icon" class="map-icon">
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About Qassim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>أماكن الإقامة في بريدة </h1>ٍٍ
+        <div class="slider"></div>
+        <div class="section">
+            <img src="{% static 'img/oi.jpg' %}" alt="فندق موڤنبيك">
+            <h2>  فندق موڤنبيك  </h2>
+            <p> يتمتع Mövenpick Hotel Qassim الحصري بموقع مثالي في وسط مدينة بريدة ويقع بالقرب من إمارة القصيم.</p>
+        </div>
+        <div class="section">
+            <img src="{% static 'img/xx.jpg' %}" alt="فندق لاجونا ڤيستا   ">
+            <h2>فندق لاجونا ڤيستا</h2>
+            <p>وجهات الإقامة العائلية.</p>
+        </div>
+        <div class="section">
+            <img src="{% static 'img/xxs.jpg' %}" alt="  جولدن دلة ">
+            <h2> جولدن دلة</h2>
+            <p>وجهات السعادة العائليّة.</p>
+        </div>
+        
+        <h1 class="header">أفضل المعالم السياحية</h1>
+        <div class="section">
+            <img src="{% static 'img/197.jpg' %}" alt=" مركز الملك خالد الحضاري في بريدة
+
+            ">
+            <h2>  مركز الملك خالد الحضاري في بريدة
+            </h2>
+            <p>افتتح المركز بالعام 1985م تخليداً لذكرى الملك خالد بن عبدالعزيز آل سعود رحمه الله. كما احتل المكانة المتقدمة بين اماكن سياحية ببريدة باعتباره أهم وأكبر معالم حضاري معاصر. حيث يتمتع بتصميم معماري ساحر وجميل، وديكورات شديدة الجاذبية والسحر.</p>
+        </div>
+        <div class="section">
+            <img src="{% static 'img/ff.jpg' %}" alt=" ميدان الفروسية     ">
+            <h2> ميدان الفروسية</h2>
+            <p>مقام بشرق المدينة، مُشرفاً على الطريق الدائري، وتصل مضامير سباقات الخيول فيه حتى وسط المدينة، وهو ما جعل منه أهم الاماكن السياحيه في بريده وأحد أكبر ميادين الفروسية وسباقات الهجن بالمملكة.</p>
+        </div>
+        <div class="section">
+            <img src="{% static 'img/l.jpg' %}" alt="  متحف بريدة
+
+            ">
+            <h2> متحف بريدة
+
+            </h2>
+            <p>يعود تاريخه للعام 1999م، وقد شُيّد على الطراز المعماري الإسلامي، مما أكسب المكان فخامة وبهاء وجعل منه من أبرز اماكن سياحيه ببريده خاصةً مع موقعه المتوسط للمدينة. والأهم مع ما يعرضه في قاعات عصرية مجهزة بأحدث الوسائل من قطع أثرية ومقتنيات تاريخية شديدة الندرة..</p>
+        </div>
+        
+      
+    </div>
+</body>
+</html>

@@ -9,8 +9,10 @@ def about(request):
     return render(request, 'myApp/about.html')
 
 def contact(request):
-    return render(request, 'myApp/contact.html')
+    return render(request,'myApp/contact.html')
 def unayzah(request):
-    return render(request, 'myApp/unayzah.html')
+    return render(request,'myApp/unayzah.html')
+def buraidah(request):
+    return render(request,'myApp/buraidah.html')
 
 
