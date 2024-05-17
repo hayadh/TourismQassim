@@ -8,6 +8,7 @@ urlpatterns = [
     path('contact/',contact, name='contact'),
     path('unayzah/',unayzah, name='unayzah'),
     path('buraidah/',buraidah,name='buraidah'),
+  
     
 
     

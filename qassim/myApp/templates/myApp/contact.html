@@ -90,13 +90,17 @@
         <h1>Contact Us</h1>
     </header>
     <main>
-        <form action="/submit-contact/" method="post">
+        <form action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
+            <label for="name">name:</label><br>
+            <input type="name" id="name" name="name" required><br><br>
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br><br>
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
             <input type="submit" value="Submit">
         </form>
+    
     </main>
     <footer>
         <p>Email: info@example.com</p>
